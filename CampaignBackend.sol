@@ -1,6 +1,6 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
-contract factoryCampaign{
+contract factoryCampaign{ //function that creates more than 1 campaign as an admin
     address[] public createdCampaigns;
     function createNewCampaign(uint minimum) public {
        address(new CampaignContract(minimum, msg.sender));
